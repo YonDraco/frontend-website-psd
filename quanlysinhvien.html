@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Quản lý sinh viên</title>
+		<style type="text/css">
+			#bang {
+			font-family: Arial;
+			border-collapse: collapse;
+			width: 100%;
+			}
+			#bang td, 
+			#bang th {
+			border: 1px solid #ddd;
+			padding: 8px;
+			}
+			#bang tr:nth-child(even)
+			{background-color: #f2f2f2;}
+			#bang tr:hover 
+			{background-color: #ddd;}
+			#bang th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: green;
+			color: white;
+			}
+			input[type=text],
+			select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 3px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			}
+			input[type=submit] {
+			width: 100%;
+			background-color: green;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			}
+			input[type=submit]:hover {
+			background-color: green;
+			}
+			div {
+			border-radius: 5px;
+			background-color: gray;
+			padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center">Chương trình quản lý sinh viên</h1>
+		<h2>Điền thông tin sinh viên</h2>
+		<div>
+			
+				<label for="masv">Mã sinh viên</label>
+				<input type="text" id="msv"  placeholder="Mã sv..." >
+				<label for="hoten">Họ tên</label>
+				<input type="text" id="hoten"  placeholder="Họ tên..." >
+				<label for="quequan">Quê quán</label>
+				<input type="text" id="quequan"  placeholder="Quê quán...">
+				<label>Ngày sinh:</label><br>
+			    <input type="text" placeholder="Ngày sinh..." id="ngaysinh"><br><br>
+
+				<input type="submit" value="Submit" onclick="them()" id="submit" title=""><br>
+			
+		</div>
+		<h2>Danh sách sinh viên</h2>
+		<table id="bang"></table>	
+			<script type="text/javascript">
+				var sinhvien = [
+		    {msv:637634,hoten:"Hoà",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+		    {msv:637635,hoten:"Loan",quequan:"Thanh Hóa",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637636,hoten:"Lan",quequan:"Hải Dương",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637637,hoten:"Thanh",quequan:"Nghệ An",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637638,hoten:"Thủy",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},];
+				var output="<tr><td>MSV</td><td>Họ tên</td><td>Quê quán</td><td>Xóa<td>Sửa</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+	output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoa("+i+")'>Xóa</button>"+"</td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>"
+				}
+				document.getElementById("bang").innerHTML=output;
+				function them(){
+					if (document.getElementById("submit").title="") {
+						            sinhvien.push({msv:document.getElementById("msv").value,
+							        hoten:document.getElementById("hoten").value,
+							        quequan:document.getElementById("quequan").value
+							        });
+
+
+					var n=sinhvien.length-1;
+					sinhvien[n].masv = document.getElementById("masv").value;
+					sinhvien[n].hoten = document.getElementById("hoten").value;
+					sinhvien[n].quequan = document.getElementById("quequan").value;
+
+					sinhvien.push({msv:document.getElementById("masv").value, hoten: document.getElementById("hoten").value,quequan: document.getElementById("quequan").value});
+	output+="<tr><td>"+sinhvien[n].msv+"</td>"+"<td>"+sinhvien[n].hoten+"</td>"+"<td>"+sinhvien[n].quequan+"</td><td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>"					
+				
+				document.getElementById("bang").innerHTML=output;
+			}else{
+				var m=parseInt(document.getElementById("submit").title);
+			sinhvien.splice(m,1,{msv:document.getElementById("msv").value,
+								hoten: document.getElementById("hoten").value,
+								quequan: document.getElementById("quequan").value});
+			var output = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa Sv</td></tr>";
+							for( var i=0; i<sinhvien.length;i++){
+											output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+					}
+			document.getElementById("bang").innerHTML=output;
+											}
+
+
+
+
+
+				
+				}	
+				function xoa(i){
+					sinhvien.splice(i,1);
+					var output="<tr><td>MSV</td><td>Họ tên</td><td>Quê quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+	output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>";
+	}	
+	            document.getElementById("bang").innerHTML=output;}
+	            function sua(i){
+	            	
+	               document.getElementById("msv").value=sinhvien[i].msv;
+				   document.getElementById("hoten").value=sinhvien[i].hoten;
+				   document.getElementById("quequan").value=sinhvien[i].quequan;
+				   document.getElementById("submit").title=i;
+				   
+				  
+	            }
+	        
+			</script>
+</body>
+</html>
