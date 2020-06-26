@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="./css/css">
+    <style>
+        .gm-ui-hover-effect {
+            opacity: .6
+        }
+
+        .gm-ui-hover-effect:hover {
+            opacity: 1
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px;
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style>
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
+    <style>
+        .gm-style img {
+            max-width: none;
+        }
+
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>ProFix</title>
+    <link href="./css/animate.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="./icons/css/all.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="./css/css(1)"
+        rel="stylesheet">
+    <link href="./css/css(2)"
+        rel="stylesheet">
+    <link href="./css/chosen.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="./css/jquery-ui.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="./css/pentix.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="./css/pex-theme.min.css"
+        rel="stylesheet" type="text/css">
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/common.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/util.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/map.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/marker.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/stats.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/onion.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/ViewportInfoService.GetViewportInfo">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/f.txt"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/controls.js.download">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/AuthenticationService.Authenticate">
+    </script>
+    <script type="text/javascript" charset="UTF-8"
+        src="./css/QuotaService.RecordEvent">
+    </script>
+</head>
+
+<body class="body" cz-shortcut-listen="true">
+    <div class="parallax-mirror"
+        style="visibility: hidden; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; height: 520px; width: 1903px; transform: translate3d(0px, 891px, 0px);">
+        <img class="parallax-slider"
+            src="./img/motherboard-2.jpg"
+            style="position: absolute; height: 1268px; width: 1903px; max-width: none; transform: translate3d(0px, -919.8px, 0px);">
+    </div>
+    <header class="header header-over sticked-menu" style="height: 153px;"><input id="header-default" type="radio"
+            class="collapse" checked="checked" name="siteheader"> <input id="header-shown" type="radio" class="collapse"
+            name="siteheader"> <input id="header-hidden" type="radio" class="collapse" name="siteheader">
+        <div class="infobar transparent bottom-separator xs-hidden">
+            <div class="container">
+                <div class="cols-list pull-left cols-md">
+                    <div class="list-item"><span class="info-icon"><i class="fas fa-home"
+                                aria-hidden="true"></i></span>Sidestate NSW 4132, Australia</div>
+                    <div class="list-item"><span class="info-icon"><i class="fas fa-phone"></i></span>Help: + 88 018
+                        4113 6251</div>
+                </div>
+                <div class="cols-list pull-right cols-md socials">
+                    <div class="list-item"><a href="https://amigosthemes.com/profix/index.html#"><i
+                                class="fab fa-twitter" aria-hidden="true"></i></a></div>
+                    <div class="list-item"><a href="https://amigosthemes.com/profix/index.html#"><i
+                                class="fab fa-facebook-f" aria-hidden="true"></i></a></div>
+                    <div class="list-item"><a href="https://amigosthemes.com/profix/index.html#"><i
+                                class="fab fa-pinterest" aria-hidden="true"></i></a></div>
+                    <div class="list-item"><a href="https://amigosthemes.com/profix/index.html#"><i
+                                class="fab fa-google-plus-g" aria-hidden="true"></i></a></div>
+                    <div class="list-item"><a href="https://amigosthemes.com/profix/index.html#"><i
+                                class="fab fa-dribbble" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <nav class="stick-menu menu-wrap simple line transparent">
+            <div class="menu-container menu-row">
+                <div class="logo"><a href="https://amigosthemes.com/profix/index.html"><img
+                            src="./img/logo.png"
+                            alt="ProFix"></a></div>
+                <div class="header-toggler pull-right xs-shown"><label class="header-shown-sign" for="header-hidden"><i
+                            class="fas fa-times" aria-hidden="true"></i></label> <label class="header-hidden-sign"
+                        for="header-shown"><i class="fas fa-bars" aria-hidden="true"></i></label></div>
+                <div class="clearfix xs-shown"></div>
+                <div class="menu">
+                    <ul class="menu-items">
+                        <li><a href="https://amigosthemes.com/profix/index.html">Home</a><span class="toggle-icon"><i
+                                    class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                            <ul>
+                                <li><a href="https://amigosthemes.com/profix/index.html">Home 1</a></li>
+                                <li><a href="https://amigosthemes.com/profix/homepage-2.html">Home 2</a></li>
+                                <li><a href="https://amigosthemes.com/profix/homepage-3.html">Home 3</a></li>
+                                <li><a href="https://amigosthemes.com/profix/homepage-shop-1.html">Home shop 1</a></li>
+                                <li><a href="https://amigosthemes.com/profix/homepage-shop-2.html">Home shop 2</a></li>
+                                <li><a href="https://amigosthemes.com/profix/homepage-shop-3.html">Home shop 3</a></li>
+                            </ul>
+                        </li>
+                        <li><span class="menu-item">Pages</span> <span class="toggle-icon"><i
+                                    class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                            <ul>
+                                <li><span class="menu-item">Content pages</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/about-us.html">About us</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/faq.html">FAQ</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/article.html">Article</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/service.html">Service</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/project.html">Project</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">User pages</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/sign-in.html">Sign in</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/sign-up.html">Sign up</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/forgot-password.html">Forgot
+                                                password</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/dashboard.html">Dashboard</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/profile.html">Profile</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/orders.html">Orders</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/tickets.html">Tickets</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/new-ticket.html">New ticket</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Shop pages</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/shop-item.html">Shop item</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/cart.html">Cart</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/checkout.html">Checkout</a></li>
+                                        <li><a
+                                                href="https://amigosthemes.com/profix/order-confirmation.html">Confirmation</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/terms-and-conditions.html">Terms
+                                                &amp; conditions</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Search pages</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/search.html">Search</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/advanced-search.html">Advanced
+                                                search</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Page sidebar</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/page-no-sidebar.html">Page no
+                                                sidebar</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/page-sidebar-left.html">Page
+                                                sidebar left</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/page-sidebar-right.html">Page
+                                                sidebar right</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Page header/footer</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/page-header-1.html">Header 1</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-header-2.html">Header 2</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-header-3.html">Header 3</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-header-4.html">Header 4</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-header-5.html">Header 5</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-footer-1.html">Footer 1</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-footer-2.html">Footer 2</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/page-footer-3.html">Footer 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Status pages</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/404.html">404</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/404-2.html">404 - 2</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/underconstruction.html">Under
+                                                construction</a></li>
+                                    </ul>
+                                </li>
+                                <li><span class="menu-item">Elements</span> <span class="menu-sign-right"><i
+                                            class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li><a href="https://amigosthemes.com/profix/typography.html">Typography</a>
+                                        </li>
+                                        <li><a href="https://amigosthemes.com/profix/form-elements.html">Form
+                                                elements</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/form-elements-required.html">Form
+                                                elements required</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/form-elements-disabled.html">Form
+                                                elements disabled</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/form-elements-error.html">Form
+                                                elements error</a></li>
+                                        <li><a href="https://amigosthemes.com/profix/form-elements-valid.html">Form
+                                                elements valid</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://amigosthemes.com/profix/shop-category.html">Shop</a></li>
+                        <li><a href="https://amigosthemes.com/profix/services.html">Services</a></li>
+                        <li><a href="https://amigosthemes.com/profix/projects.html">Projects</a></li>
+                        <li><a href="https://amigosthemes.com/profix/blog.html">Blog</a></li>
+                        <li><a href="https://amigosthemes.com/profix/contact-us.html">Contact Us</a><span
+                                class="toggle-icon"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                            <ul class="left">
+                                <li><a href="https://amigosthemes.com/profix/contact-us.html">Contact us</a></li>
+                                <li><a href="https://amigosthemes.com/profix/contact-us-2.html">Contact us - 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://amigosthemes.com/profix/index.html#" data-show-block="search"><i
+                                    class="fas fa-search" aria-hidden="true"></i></a></li>
+                        <li class="menu-item-stick-left"><a href="https://amigosthemes.com/profix/index.html#"
+                                data-show-block="cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i><span
+                                    class="item-label-sale item-label">3</span></a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <div class="line-right xs-hidden"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <!-- <div class="flexslider screen-height" style="background-image: url(./img/data-recovery.jpg);"> -->
+            <div class="flexslider screen-height">
+            <div class="flex-custom-navigation"><a href="https://amigosthemes.com/profix/index.html#"
+                    class="flex-prev"><i class="fas fa-angle-left" aria-hidden="true"></i> </a><a
+                    href="https://amigosthemes.com/profix/index.html#" class="flex-next"><i class="fas fa-angle-right"
+                        aria-hidden="true"></i></a></div>
+            <div class="flex-viewport img-fix" style="overflow: hidden; position: relative;">
+                <div class="slides" style="width: 1000%; margin-left: -1903px;">
+                    <div class="slide clone" aria-hidden="true"
+                        style="width: 1903px; margin-right: 0px; float: left; display: block;">
+                        <img src="./img/data-recovery.jpg" alt="" data-cover-image="true" class="hide" draggable="false">
+                            <span class="cover-image"></span>
+                        <div class="theme-back"></div>
+                        <div class="pos-center text-center col-12 text-white">
+                            <div class="banner-title res-text-xxl">Data Recovery</div>
+                            <div class="banner-subtitle res-text-md">You Lose - We'll Find</div>
+                        </div>
+                    </div>
+                    <div class="slide flex-active-slide"
+                        style="width: 1903px; margin-right: 0px; float: left; display: block;"><img
+                            src="./img/motherboard-1.jpg"
+                            alt="" data-cover-image="true" class="hide" draggable="false">
+                            <span class="cover-image"></span>
+                        <div class="theme-back"></div>
+                        <div class="pos-center text-center col-12 text-white">
+                            <div class="banner-title res-text-xxl">Fast &amp; Quick Fix</div>
+                            <div class="banner-subtitle res-text-md">Just send valuable laptop, PC, MAC,
+                                Mobile,<br>Gaming Device or Smartphone and we'll take care of it.</div>
+                        </div>
+                    </div>
+                    <div class="slide" style="width: 1903px; margin-right: 0px; float: left; display: block;"><img
+                            src="./img/motherboard-3.jpg"
+                            alt="" data-cover-image="true" class="hide" draggable="false">
+                            <span class="cover-image"></span>
+                        <div class="theme-back"></div>
+                        <div class="pos-center text-center col-12 text-white">
+                            <div class="banner-title res-text-xxl">Any Kind of Upgrades</div>
+                        </div>
+                    </div>
+                    <div class="slide" style="width: 1903px; margin-right: 0px; float: left; display: block;"><img
+                            src="./img/data-recovery.jpg"
+                            alt="" data-cover-image="true" class="hide" draggable="false">
+                            <span class="cover-image"></span>
+                        <div class="theme-back"></div>
+                        <div class="pos-center text-center col-12 text-white">
+                            <div class="banner-title res-text-xxl">Data Recovery</div>
+                            <div class="banner-subtitle res-text-md">You Lose - We'll Find</div>
+                        </div>
+                    </div>
+                    <div class="slide clone" style="width: 1903px; margin-right: 0px; float: left; display: block;"
+                        aria-hidden="true"><img
+                            src="./img/motherboard-1.jpg"
+                            alt="" data-cover-image="true" class="hide" draggable="false">
+                            <span class="cover-image-1"></span>
+                        <div class="theme-back"></div>
+                        <div class="pos-center text-center col-12 text-white">
+                            <div class="banner-title res-text-xxl">Fast &amp; Quick Fix</div>
+                            <div class="banner-subtitle res-text-md">Just send valuable laptop, PC, MAC,
+                                Mobile,<br>Gaming Device or Smartphone and we'll take care of it.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix muted-bg">
+        <section class="md-stuck-top content-section">
+            <div class="container hyped-block">
+                <div class="row cols-md rows-md">
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-md">
+                            <div class="sm-col-6">
+                                <div class="price-block simple showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image"
+                                            src="./img/notebook-dark.png"
+                                            alt=""></div>
+                                    <div class="price-title">Laptop Repair</div>
+                                    <div class="price-subtext">starting at...</div>
+                                    <div class="price">$20.00</div><a class="btn-md btns-bordered btn text-upper"
+                                        href="https://amigosthemes.com/profix/index.html#">read more</a>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="price-block simple showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image"
+                                            src="./img/computer-dark.png"
+                                            alt=""></div>
+                                    <div class="price-title">Computer Repair</div>
+                                    <div class="price-subtext">starting at...</div>
+                                    <div class="price">$20.00</div><a class="btn-md btns-bordered btn text-upper"
+                                        href="https://amigosthemes.com/profix/index.html#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-md">
+                            <div class="sm-col-6">
+                                <div class="price-block simple showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image"
+                                            src="./img/printer-dark.png"
+                                            alt=""></div>
+                                    <div class="price-title">Printer Repair</div>
+                                    <div class="price-subtext">starting at...</div>
+                                    <div class="price">$110.00</div><a class="btn-md btns-bordered btn text-upper"
+                                        href="https://amigosthemes.com/profix/index.html#">read more</a>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="price-block simple showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image"
+                                            src="./img/mobile-dark.png"
+                                            alt=""></div>
+                                    <div class="price-title">Smartphone Repair</div>
+                                    <div class="price-subtext">starting at...</div>
+                                    <div class="price">$45.00</div><a class="btn-md btns-bordered btn text-upper"
+                                        href="https://amigosthemes.com/profix/index.html#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="section-head text-center container-md">
+                    <h2 class="section-title text-upper text-lg showup-translate-right"
+                        data-inview-showup="showup-translate-right">Why choose us</h2>
+                    <p data-inview-showup="showup-translate-left" class="showup-translate-left">Some Of Our Features</p>
+                </div>
+                <div class="row cols-md rows-lg text-center">
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-lg">
+                            <div class="sm-col-6">
+                                <div class="feature feature-side text-left showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="feature-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                                    <div class="feature-title text-upper">We are fast</div>
+                                    <div class="feature-text">Qualified Workers Lorem Ipsum is simply dummy text of the
+                                        printing</div>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="feature feature-side text-left showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="feature-icon"><i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="feature-title text-upper">No fix, no fee</div>
+                                    <div class="feature-text">Repair on Demand Lorem Ipsum is simply dummy text of the
+                                        printing</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-lg">
+                            <div class="sm-col-6">
+                                <div class="feature feature-side text-left showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="feature-icon"><i class="far fa-calendar-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="feature-title text-upper">30 days warranty</div>
+                                    <div class="feature-text">Guaranteed Service Lorem Ipsum is simply dummy text of the
+                                        printing</div>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="feature feature-side text-left showup-translate-up"
+                                    data-inview-showup="showup-translate-up">
+                                    <div class="feature-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                                    <div class="feature-title text-upper">Expert staff</div>
+                                    <div class="feature-text">Available Anytime Lorem Ipsum is simply dummy text of the
+                                        printing</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="with-bg solid-section">
+        <div class="fix-image-wrap" data-image-src="./img/motherboard-2.jpg" data-parallax="scroll"></div>
+        <div class="theme-back inner-shadow"></div>
+        <div class="container text-center">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg showup-translate-right"
+                    data-inview-showup="showup-translate-right">Service process</h2>
+                <p data-inview-showup="showup-translate-left" class="showup-translate-left">easy and effective way to
+                    get your device repaired</p>
+            </div>
+            <div class="service-steps text-upper showup-scale" data-inview-showup="showup-scale">
+                <div class="step"><span class="step-number">1</span>damage device</div>
+                <div class="step"><span class="step-number">2</span>send it to us</div>
+                <div class="step"><span class="step-number active">3</span>fast fix</div>
+                <div class="step"><span class="step-number">4</span>quick return</div>
+            </div>
+        </div>
+    </section>
+    <section class="muted-bg solid-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg showup-translate-right"
+                    data-inview-showup="showup-translate-right">Services</h2>
+                <p data-inview-showup="showup-translate-left" class="showup-translate-left">We offer a full range of
+                    repair services provided by an experienced and specialized team</p>
+            </div>
+            <div class="row cols-md rows-md">
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-1.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Data backup &amp; recovery</a>
+                            </div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-2.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Laptop &amp; Mac Upgrade</a>
+                            </div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-3.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Repair Smartphone</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-4.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Tablet Repair</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-5.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Repair PC &amp; Laptop
+                                    Hardware</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item showup-translate-up" data-inview-showup="showup-translate-up"><a
+                            href="https://amigosthemes.com/profix/service.html" class="block-link text-center"><span
+                                class="image-wrap"><img class="image"
+                                    src="./img/item-6.jpg"
+                                    alt=""></span><span class="hover"><span class="hover-show"><span
+                                        class="back"></span> <span class="content"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content">
+                            <div class="item-title text-upper"><a
+                                    href="https://amigosthemes.com/profix/service.html">Network Solution</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction
+                                through technical excellence and friendly staff</div><a
+                                href="https://amigosthemes.com/profix/service.html"
+                                class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center shift-xl"><a class="btn text-upper inview-showup"
+                    href="https://amigosthemes.com/profix/services.html" data-inview-showup="showup-translate-up"><i
+                        class="fas fa-th-large" aria-hidden="true"></i>&nbsp;&nbsp;view all services</a></div>
+        </div>
+    </section>
+    <section class="main-bg decorated-bg text-center tight solid-section">
+        <div class="container">
+            <div class="row cols-md rows-xl inview-showup" data-inview-showup="showup-translate-up">
+                <div class="sm-col-3">
+                    <div class="counter">
+                        <div class="counter-title text-upper">Happy client</div>
+                        <div class="counter-value" data-waypoint-counter="3720">3720</div>
+                    </div>
+                </div>
+                <div class="sm-col-3">
+                    <div class="counter">
+                        <div class="counter-title text-upper">Finished projects</div>
+                        <div class="counter-value" data-waypoint-counter="4170">4170</div>
+                    </div>
+                </div>
+                <div class="sm-col-3">
+                    <div class="counter">
+                        <div class="counter-title text-upper">Computer serviced</div>
+                        <div class="counter-value" data-waypoint-counter="2730">2730</div>
+                    </div>
+                </div>
+                <div class="sm-col-3">
+                    <div class="counter">
+                        <div class="counter-title text-upper">Mobile serviced</div>
+                        <div class="counter-value" data-waypoint-counter="1510">1510</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg inview-showup" data-inview-showup="showup-translate-right">
+                    What people say</h2>
+                <p data-inview-showup="showup-translate-left" class="inview-showup">Real customers reviews</p>
+            </div>
+            <div class="owl-carousel owl-loaded owl-drag inview-showup" data-inview-showup="showup-translate-up"
+                data-owl-dots="true">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage"
+                        style="transform: translate3d(-2320px, 0px, 0px); transition: all 0.25s ease 0s; width: 4641px;">
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Flexible services</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Profix did great job with fixing my laptop for a
+                                        good price. I recommend any body with laptop problems, they will give you
+                                        excellent service to all his customers.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/mobile-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Merry Smith</div>
+                                    <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Great customer support</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Thanks John, I was really pleased with Profix’s
+                                        service. Would definitely recommend you and have alredy given out some of your
+                                        business cards that were left with me. All the best for future succes.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/computer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Excellent team</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Keep up the excellent work. Thank you so much for
+                                        your help. This is simply unbelievable!
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/printer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Great customer support</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Thanks John, I was really pleased with Profix’s
+                                        service. Would definitely recommend you and have alredy given out some of your
+                                        business cards that were left with me. All the best for future succes.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/notebook-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Flexible services</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Profix did great job with fixing my laptop for a
+                                        good price. I recommend any body with laptop problems, they will give you
+                                        excellent service to all his customers.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/computer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Merry Smith</div>
+                                    <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Excellent team</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Keep up the excellent work. Thank you so much for
+                                        your help. This is simply unbelievable!
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/printer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Flexible services</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Profix did great job with fixing my laptop for a
+                                        good price. I recommend any body with laptop problems, they will give you
+                                        excellent service to all his customers.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/mobile-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Merry Smith</div>
+                                    <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Great customer support</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Thanks John, I was really pleased with Profix’s
+                                        service. Would definitely recommend you and have alredy given out some of your
+                                        business cards that were left with me. All the best for future succes.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/computer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Excellent team</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Keep up the excellent work. Thank you so much for
+                                        your help. This is simply unbelievable!
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/printer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Great customer support</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Thanks John, I was really pleased with Profix’s
+                                        service. Would definitely recommend you and have alredy given out some of your
+                                        business cards that were left with me. All the best for future succes.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/notebook-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Flexible services</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Profix did great job with fixing my laptop for a
+                                        good price. I recommend any body with laptop problems, they will give you
+                                        excellent service to all his customers.
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/computer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Merry Smith</div>
+                                    <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 386.667px;">
+                            <div class="item">
+                                <div class="simple-testimonial text-center">
+                                    <div class="tt-title">Excellent team</div>
+                                    <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i><i
+                                            class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                                    <div class="tt-content">
+                                        <div class="tt-quote">“</div>Keep up the excellent work. Thank you so much for
+                                        your help. This is simply unbelievable!
+                                    </div>
+                                    <div class="tt-icon"><img
+                                            src="./img/printer-sm.png"
+                                            alt=""></div>
+                                    <div class="pexx-tt-user-title">Michale John</div>
+                                    <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav disabled">
+                    <div class="owl-prev">prev</div>
+                    <div class="owl-next">next</div>
+                </div>
+                <div class="owl-dots">
+                    <div class="owl-dot"><span></span></div>
+                    <div class="owl-dot active"><span></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-bg inview-showup" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="contact-table only-xs-text-center">
+                <div class="contact-icon xs-hidden"><i class="fas fa-bicycle" aria-hidden="true"></i></div>
+                <div class="contact-content">
+                    <div class="contact-title">Request free consultation</div>
+                    <div class="text-justify only-xs-text-justify-center">Get answers and advice from people you want it
+                        from.</div>
+                </div>
+                <div class="contact-btn"><a href="https://amigosthemes.com/profix/contact-us.html"
+                        class="btn btns-white text-upper">Contact Us</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center content-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg inview-showup" data-inview-showup="showup-translate-right">
+                    We are authorized</h2>
+            </div>
+            <div class="owl-carousel owl-loaded owl-drag inview-showup" data-inview-showup="showup-translate-up"
+                data-owl-responsive="2;3;4;5" data-owl-items="5">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage"
+                        style="transform: translate3d(-1856px, 0px, 0px); transition: all 0.25s ease 0s; width: 3944px;">
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/endless.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/finddata.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/squarepc.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/tranquil.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/uberguard.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/altworks.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/brothers.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/endless.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item active" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/finddata.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item active" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/squarepc.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item active" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/tranquil.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item active" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/uberguard.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned active" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/altworks.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/brothers.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/endless.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/finddata.png"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 232px;">
+                            <div class="item"><a class="grayscale-link"
+                                    href="https://amigosthemes.com/profix/index.html#"><img class="image"
+                                        src="./img/squarepc.png"
+                                        alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav disabled">
+                    <div class="owl-prev">prev</div>
+                    <div class="owl-next">next</div>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </section>
+    <section class="map-section inview-showup" data-inview-showup="showup-translate-right">
+        <div class="gmap" data-lat="-33.878897" data-lng="151.103737" style="position: relative; overflow: hidden;">
+            <div
+                style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                <div class="gm-style"
+                    style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;">
+                    <div tabindex="0"
+                        style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;">
+                        <div
+                            style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                    <div
+                                        style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -18, -38);">
+                                        <div
+                                            style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -1024px; top: 256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -1024px; top: 0px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                        <div
+                                            style="position: absolute; left: -1024px; top: -256px; width: 256px; height: 256px;">
+                                            <div style="width: 256px; height: 256px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                    <div
+                                        style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -18, -38);">
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: -256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -1024px; top: 256px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -1024px; top: 0px;">
+                                        </div>
+                                        <div
+                                            style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -1024px; top: -256px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="width: 32px; height: 48px; overflow: hidden; position: absolute; left: -86px; top: -104px; z-index: -56;">
+                                    <img alt=""
+                                        src="./img/map-marker.png"
+                                        draggable="false"
+                                        style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 48px; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                            </div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                <div style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -18, -38);">
+                                    <div
+                                        style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(1)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -1024px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(2)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(3)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -1024px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(4)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(5)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(6)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(7)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(8)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -1024px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(9)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(10)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(11)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(12)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(13)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(14)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(15)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(16)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(17)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(18)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(19)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(20)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(21)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(22)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                    <div
+                                        style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;">
+                                        <img draggable="false" alt="" role="presentation"
+                                            src="./img/vt(23)"
+                                            style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gm-style-pbc"
+                            style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;">
+                            <p class="gm-style-pbt"></p>
+                        </div>
+                        <div
+                            style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;">
+                            <div
+                                style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);">
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                                    <div title=""
+                                        style="width: 32px; height: 48px; overflow: hidden; position: absolute; opacity: 0; cursor: pointer; touch-action: none; left: -86px; top: -104px; z-index: -56;">
+                                        <img alt=""
+                                            src="./img/map-marker.png"
+                                            draggable="false"
+                                            style="position: absolute; left: 0px; top: 0px; user-select: none; width: 32px; height: 48px; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                    </div>
+                                </div>
+                                <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div><iframe aria-hidden="true" frameborder="0" tabindex="-1"
+                        style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"
+                        src="./img/saved_resource.html"></iframe>
+                    <div
+                        style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                        <a target="_blank" rel="noopener"
+                            href="https://maps.google.com/maps?ll=-33.880897,151.106737&amp;z=15&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"
+                            title="Open this area in Google Maps (opens a new window)"
+                            style="position: static; overflow: visible; float: none; display: inline;">
+                            <div style="width: 66px; height: 26px; cursor: pointer;"><img alt=""
+                                    src="./img/google_white5.png"
+                                    draggable="false"
+                                    style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;">
+                            </div>
+                        </a></div>
+                    <div
+                        style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 300px; height: 180px; position: absolute; left: 802px; top: 160px;">
+                        <div style="padding: 0px 0px 10px; font-size: 16px; box-sizing: border-box;">Map Data</div>
+                        <div style="font-size: 13px;">Map data ©2020 Google</div><button draggable="false" title="Close"
+                            aria-label="Close" type="button" class="gm-ui-hover-effect"
+                            style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: absolute; cursor: pointer; user-select: none; top: 0px; right: 0px; width: 37px; height: 37px;"><img
+                                src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                style="pointer-events: none; display: block; width: 13px; height: 13px; margin: 12px;"></button>
+                    </div>
+                    <div class="gmnoprint"
+                        style="z-index: 1000001; position: absolute; right: 71px; bottom: 0px; width: 121px;">
+                        <div draggable="false" class="gm-style-cc"
+                            style="user-select: none; height: 14px; line-height: 14px;">
+                            <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                <div style="width: 1px;"></div>
+                                <div
+                                    style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;">
+                                </div>
+                            </div>
+                            <div
+                                style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                                <a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map
+                                    data ©2020 Google</span></div>
+                        </div>
+                    </div>
+                    <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                        <div
+                            style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">
+                            Map data ©2020 Google</div>
+                    </div>
+                    <div class="gmnoprint gm-style-cc" draggable="false"
+                        style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                            <div style="width: 1px;"></div>
+                            <div
+                                style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;">
+                            </div>
+                        </div>
+                        <div
+                            style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                            <a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank"
+                                rel="noopener"
+                                style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a>
+                        </div>
+                    </div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view"
+                        type="button" class="gm-control-active gm-fullscreen-control"
+                        style="background: none rgb(255, 255, 255); border: 0px; margin: 10px; padding: 0px; position: absolute; cursor: pointer; user-select: none; border-radius: 2px; height: 40px; width: 40px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; overflow: hidden; top: 0px; right: 0px;"><img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%20018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                            style="height: 18px; width: 18px;"><img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                            style="height: 18px; width: 18px;"><img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                            style="height: 18px; width: 18px;"></button>
+                    <div draggable="false" class="gm-style-cc"
+                        style="user-select: none; height: 14px; line-height: 14px; display: none; position: absolute; right: 0px; bottom: 0px;">
+                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                            <div style="width: 1px;"></div>
+                            <div
+                                style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;">
+                            </div>
+                        </div>
+                        <div
+                            style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                            <a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google"
+                                href="https://www.google.com/maps/@-33.880897,151.106737,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3"
+                                style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report
+                                a map error</a></div>
+                    </div>
+                    <div class="gmnoprint gm-bundled-control" draggable="false" controlwidth="40" controlheight="81"
+                        style="margin: 10px; user-select: none; position: absolute; left: 0px; top: 200px;">
+                        <div class="gmnoprint" controlwidth="40" controlheight="81"
+                            style="position: absolute; left: 0px; top: 0px;">
+                            <div draggable="false"
+                                style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 40px; height: 81px;">
+                                <button draggable="false" title="Zoom in" aria-label="Zoom in" type="button"
+                                    class="gm-control-active"
+                                    style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23333%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23111%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"></button>
+                                <div
+                                    style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); top: 0px;">
+                                </div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button"
+                                    class="gm-control-active"
+                                    style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false"
+                        controlwidth="40" controlheight="40"
+                        style="margin: 10px; user-select: none; position: absolute; bottom: 66px; left: 0px;">
+                        <div class="gm-svpc" dir="ltr" title="Drag Pegman onto the map to open Street View"
+                            controlwidth="40" controlheight="40"
+                            style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 40px; height: 40px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none; position: absolute; left: 0px; top: 0px;">
+                            <div style="position: absolute; left: 50%; top: 50%;"></div>
+                            <div style="position: absolute; left: 50%; top: 50%;"><img
+                                    src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2238%22%20viewBox%3D%220%200%2023%2038%22%3E%0A%3Cpath%20d%3D%22M16.6%2C38.1h-5.5l-0.2-2.9-0.2%2C2.9h-5.5L5%2C25.3l-0.8%2C2a1.53%2C1.53%2C0%2C0%2C1-1.9.9l-1.2-.4a1.58%2C1.58%2C0%2C0%2C1-1-1.9v-0.1c0.3-.9%2C3.1-11.2%2C3.1-11.2a2.66%2C2.66%2C0%2C0%2C1%2C2.3-2l0.6-.5a6.93%2C6.93%2C0%2C0%2C1%2C4.7-12%2C6.8%2C6.8%2C0%2C0%2C1%2C4.9%2C2%2C7%2C7%2C0%2C0%2C1%2C2%2C4.9%2C6.65%2C6.65%2C0%2C0%2C1-2.2%2C5l0.7%2C0.5a2.78%2C2.78%2C0%2C0%2C1%2C2.4%2C2s2.9%2C11.2%2C2.9%2C11.3a1.53%2C1.53%2C0%2C0%2C1-.9%2C1.9l-1.3.4a1.63%2C1.63%2C0%2C0%2C1-1.9-.9l-0.7-1.8-0.1%2C12.7h0Zm-3.6-2h1.7L14.9%2C20.3l1.9-.3%2C2.4%2C6.3%2C0.3-.1c-0.2-.8-0.8-3.2-2.8-10.9a0.63%2C0.63%2C0%2C0%2C0-.6-0.5h-0.6l-1.1-.9h-1.9l-0.3-2a4.83%2C4.83%2C0%2C0%2C0%2C3.5-4.7A4.78%2C4.78%200%200%2C0%2011%202.3H10.8a4.9%2C4.9%2C0%2C0%2C0-1.4%2C9.6l-0.3%2C2h-1.9l-1%2C.9h-0.6a0.74%2C0.74%2C0%2C0%2C0-.6.5c-2%2C7.5-2.7%2C10-3%2C10.9l0.3%2C0.1%2C2.5-6.3%2C1.9%2C0.3%2C0.2%2C15.8h1.6l0.6-8.4a1.52%2C1.52%2C0%2C0%2C1%2C1.5-1.4%2C1.5%2C1.5%2C0%2C0%2C1%2C1.5%2C1.4l0.9%2C8.4h0Zm-10.9-9.6h0Zm17.5-.1h0Z%22%20style%3D%22fill%3A%23333%3Bopacity%3A0.7%3Bisolation%3Aisolate%22%2F%3E%0A%3Cpath%20d%3D%22M5.9%2C13.6l1.1-.9h7.8l1.2%2C0.9%22%20style%3D%22fill%3A%23ce592c%22%2F%3E%0A%3Cellipse%20cx%3D%2210.9%22%20cy%3D%2213.1%22%20rx%3D%222.7%22%20ry%3D%220.3%22%20style%3D%22fill%3A%23ce592c%3Bopacity%3A0.5%3Bisolation%3Aisolate%22%2F%3E%0A%3Cpath%20d%3D%22M20.6%2C26.1l-2.9-11.3a1.71%2C1.71%2C0%2C0%2C0-1.6-1.2H5.7a1.69%2C1.69%2C0%2C0%2C0-1.5%2C1.3l-3.1%2C11.3a0.61%2C0.61%2C0%2C0%2C0%2C.3.7l1.1%2C0.4a0.61%2C0.61%2C0%2C0%2C0%2C.7-0.3l2.7-6.7%2C0.2%2C16.8h3.6l0.6-9.3a0.47%2C0.47%2C0%2C0%2C1%2C.44-0.5h0.06c0.4%2C0%2C.4.2%2C0.5%2C0.5l0.6%2C9.3h3.6L15.7%2C20.3l2.5%2C6.6a0.52%2C0.52%2C0%2C0%2C0%2C.66.31h0l1.2-.4a0.57%2C0.57%2C0%2C0%2C0%2C.5-0.7h0Z%22%20style%3D%22fill%3A%23fdbf2d%22%2F%3E%0A%3Cpath%20d%3D%22M7%2C13.6l3.9%2C6.7%2C3.9-6.7%22%20style%3D%22fill%3A%23cf572e%3Bopacity%3A0.6%3Bisolation%3Aisolate%22%2F%3E%0A%3Ccircle%20cx%3D%2210.9%22%20cy%3D%227%22%20r%3D%225.9%22%20style%3D%22fill%3A%23fdbf2d%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                    aria-label="Street View Pegman Control"
+                                    style="height: 30px; width: 30px; position: absolute; transform: translate(-50%, -50%); pointer-events: none;"><img
+                                    src="data:image/svg+xml,%3Csvg%20width%3D%2224px%22%20height%3D%2238px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2024%2038%22%3E%0A%3Cpath%20d%3D%22M22%2C26.6l-2.9-11.3a2.78%2C2.78%2C0%2C0%2C0-2.4-2l-0.7-.5a6.82%2C6.82%2C0%2C0%2C0%2C2.2-5%2C6.9%2C6.9%2C0%2C0%2C0-13.8%2C0%2C7%2C7%2C0%2C0%2C0%2C2.2%2C5.1l-0.6.5a2.55%2C2.55%2C0%2C0%2C0-2.3%2C2s-3%2C11.1-3%2C11.2v0.1a1.58%2C1.58%2C0%2C0%2C0%2C1%2C1.9l1.2%2C0.4a1.63%2C1.63%2C0%2C0%2C0%2C1.9-.9l0.8-2%2C0.2%2C12.8h11.3l0.2-12.6%2C0.7%2C1.8a1.54%2C1.54%2C0%2C0%2C0%2C1.5%2C1%2C1.09%2C1.09%2C0%2C0%2C0%2C.5-0.1l1.3-.4a1.85%2C1.85%2C0%2C0%2C0%2C.7-2h0Zm-1.2.9-1.2.4a0.61%2C0.61%2C0%2C0%2C1-.7-0.3l-2.5-6.6-0.2%2C16.8h-9.4L6.6%2C21l-2.7%2C6.7a0.52%2C0.52%2C0%2C0%2C1-.66.31h0l-1.1-.4a0.52%2C0.52%2C0%2C0%2C1-.31-0.66v0l3.1-11.3a1.69%2C1.69%2C0%2C0%2C1%2C1.5-1.3h0.2l1-.9h2.3a5.9%2C5.9%2C0%2C1%2C1%2C3.2%2C0h2.3l1.1%2C0.9h0.2a1.71%2C1.71%2C0%2C0%2C1%2C1.6%2C1.2l2.9%2C11.3a0.84%2C0.84%2C0%2C0%2C1-.4.7h0Z%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A0.2%22%2F%3E%22%0A%3C%2Fsvg%3E%0A%0A"
+                                    aria-label="Pegman is on top of the Map"
+                                    style="display: none; height: 30px; width: 30px; position: absolute; transform: translate(-50%, -50%); pointer-events: none;"><img
+                                    src="data:image/svg+xml,%3Csvg%20width%3D%2240px%22%20height%3D%2250px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2040%2050%22%3E%0A%3Cpath%20d%3D%22M34.00%2C-30.40l-2.9-11.3a2.78%2C2.78%2C0%2C0%2C0-2.4-2l-0.7-.5a6.82%2C6.82%2C0%2C0%2C0%2C2.2-5%2C6.9%2C6.9%2C0%2C0%2C0-13.8%2C0%2C7%2C7%2C0%2C0%2C0%2C2.2%2C5.1l-0.6.5a2.55%2C2.55%2C0%2C0%2C0-2.3%2C2s-3%2C11.1-3%2C11.2v0.1a1.58%2C1.58%2C0%2C0%2C0%2C1%2C1.9l1.2%2C0.4a1.63%2C1.63%2C0%2C0%2C0%2C1.9-.9l0.8-2%2C0.2%2C12.8h11.3l0.2-12.6%2C0.7%2C1.8a1.54%2C1.54%2C0%2C0%2C0%2C1.5%2C1%2C1.09%2C1.09%2C0%2C0%2C0%2C.5-0.1l1.3-.4a1.85%2C1.85%2C0%2C0%2C0%2C.7-2h0Zm-1.2.9-1.2.4a0.61%2C0.61%2C0%2C0%2C1-.7-0.3l-2.5-6.6-0.2%2C16.8h-9.4L18.60%2C-36.00l-2.7%2C6.7a0.52%2C0.52%2C0%2C0%2C1-.66.31h0l-1.1-.4a0.52%2C0.52%2C0%2C0%2C1-.31-0.66v0l3.1-11.3a1.69%2C1.69%2C0%2C0%2C1%2C1.5-1.3h0.2l1-.9h2.3a5.9%2C5.9%2C0%2C1%2C1%2C3.2%2C0h2.3l1.1%2C0.9h0.2a1.71%2C1.71%2C0%2C0%2C1%2C1.6%2C1.2l2.9%2C11.3a0.84%2C0.84%2C0%2C0%2C1-.4.7h0Zm1.2%2C59.1-2.9-11.3a2.78%2C2.78%2C0%2C0%2C0-2.4-2l-0.7-.5a6.82%2C6.82%2C0%2C0%2C0%2C2.2-5%2C6.9%2C6.9%2C0%2C0%2C0-13.8%2C0%2C7%2C7%2C0%2C0%2C0%2C2.2%2C5.1l-0.6.5a2.55%2C2.55%2C0%2C0%2C0-2.3%2C2s-3%2C11.1-3%2C11.2v0.1a1.58%2C1.58%2C0%2C0%2C0%2C1%2C1.9l1.2%2C0.4a1.63%2C1.63%2C0%2C0%2C0%2C1.9-.9l0.8-2%2C0.2%2C12.8h11.3l0.2-12.6%2C0.7%2C1.8a1.54%2C1.54%2C0%2C0%2C0%2C1.5%2C1%2C1.09%2C1.09%2C0%2C0%2C0%2C.5-0.1l1.3-.4a1.85%2C1.85%2C0%2C0%2C0%2C.7-2h0Zm-1.2.9-1.2.4a0.61%2C0.61%2C0%2C0%2C1-.7-0.3l-2.5-6.6-0.2%2C16.8h-9.4L18.60%2C24.00l-2.7%2C6.7a0.52%2C0.52%2C0%2C0%2C1-.66.31h0l-1.1-.4a0.52%2C0.52%2C0%2C0%2C1-.31-0.66v0l3.1-11.3a1.69%2C1.69%2C0%2C0%2C1%2C1.5-1.3h0.2l1-.9h2.3a5.9%2C5.9%2C0%2C1%2C1%2C3.2%2C0h2.3l1.1%2C0.9h0.2a1.71%2C1.71%2C0%2C0%2C1%2C1.6%2C1.2l2.9%2C11.3a0.84%2C0.84%2C0%2C0%2C1-.4.7h0Z%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A0.2%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M15.40%2C38.80h-4a1.64%2C1.64%2C0%2C0%2C1-1.4-1.1l-3.1-8a0.9%2C0.9%2C0%2C0%2C1-.5.1l-1.4.1a1.62%2C1.62%2C0%2C0%2C1-1.6-1.4l-1.1-13.1%2C1.6-1.3a6.87%2C6.87%2C0%2C0%2C1-3-4.6A7.14%2C7.14%200%200%2C1%202%204a7.6%2C7.6%2C0%2C0%2C1%2C4.7-3.1%2C7.14%2C7.14%2C0%2C0%2C1%2C5.5%2C1.1%2C7.28%2C7.28%2C0%2C0%2C1%2C2.3%2C9.6l2.1-.1%2C0.1%2C1c0%2C0.2.1%2C0.5%2C0.1%2C0.8a2.41%2C2.41%2C0%2C0%2C1%2C1%2C1s1.9%2C3.2%2C2.8%2C4.9c0.7%2C1.2%2C2.1%2C4.2%2C2.8%2C5.9a2.1%2C2.1%2C0%2C0%2C1-.8%2C2.6l-0.6.4a1.63%2C1.63%2C0%2C0%2C1-1.5.2l-0.6-.3a8.93%2C8.93%2C0%2C0%2C0%2C.5%2C1.3%2C7.91%2C7.91%2C0%2C0%2C0%2C1.8%2C2.6l0.6%2C0.3v4.6l-4.5-.1a7.32%2C7.32%2C0%2C0%2C1-2.5-1.5l-0.4%2C3.6h0Zm-10-19.2%2C3.5%2C9.8%2C2.9%2C7.5h1.6V35l-1.9-9.4%2C3.1%2C5.4a8.24%2C8.24%2C0%2C0%2C0%2C3.8%2C3.8h2.1v-1.4a14%2C14%2C0%2C0%2C1-2.2-3.1%2C44.55%2C44.55%2C0%2C0%2C1-2.2-8l-1.3-6.3%2C3.2%2C5.6c0.6%2C1.1%2C2.1%2C3.6%2C2.8%2C4.9l0.6-.4c-0.8-1.6-2.1-4.6-2.8-5.8-0.9-1.7-2.8-4.9-2.8-4.9a0.54%2C0.54%2C0%2C0%2C0-.4-0.3l-0.7-.1-0.1-.7a4.33%2C4.33%2C0%2C0%2C0-.1-0.5l-5.3.3%2C2.2-1.9a4.3%2C4.3%2C0%2C0%2C0%2C.9-1%2C5.17%2C5.17%2C0%2C0%2C0%2C.8-4%2C5.67%2C5.67%2C0%2C0%2C0-2.2-3.4%2C5.09%2C5.09%2C0%2C0%2C0-4-.8%2C5.67%2C5.67%2C0%2C0%2C0-3.4%2C2.2%2C5.17%2C5.17%2C0%2C0%2C0-.8%2C4%2C5.67%2C5.67%2C0%2C0%2C0%2C2.2%2C3.4%2C3.13%2C3.13%2C0%2C0%2C0%2C1%2C.5l1.6%2C0.6-3.2%2C2.6%2C1%2C11.5h0.4l-0.3-8.2h0Z%22%20style%3D%22fill%3A%23333%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M3.35%2C15.90l1.1%2C12.5a0.39%2C0.39%2C0%2C0%2C0%2C.36.42l0.14%2C0%2C1.4-.1a0.66%2C0.66%2C0%2C0%2C0%2C.5-0.4l-0.2-3.8-3.3-8.6h0Z%22%20style%3D%22fill%3A%23fdbf2d%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M5.20%2C28.80l1.1-.1a0.66%2C0.66%2C0%2C0%2C0%2C.5-0.4l-0.2-3.8-1.2-3.1Z%22%20style%3D%22fill%3A%23ce592b%3Bfill-opacity%3A0.25%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M21.40%2C35.70l-3.8-1.2-2.7-7.8L12.00%2C15.5l3.4-2.9c0.2%2C2.4%2C2.2%2C14.1%2C3.7%2C17.1%2C0%2C0%2C1.3%2C2.6%2C2.3%2C3.1v2.9m-8.4-8.1-2-.3%2C2.5%2C10.1%2C0.9%2C0.4v-2.9%22%20style%3D%22fill%3A%23e5892b%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M17.80%2C25.40c-0.4-1.5-.7-3.1-1.1-4.8-0.1-.4-0.1-0.7-0.2-1.1l-1.1-2-1.7-1.6s0.9%2C5%2C2.4%2C7.1a19.12%2C19.12%2C0%2C0%2C0%2C1.7%2C2.4h0Z%22%20style%3D%22fill%3A%23cf572e%3Bopacity%3A0.6%3Bisolation%3Aisolate%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M14.40%2C37.80h-3a0.43%2C0.43%2C0%2C0%2C1-.4-0.4l-3-7.8-1.7-4.8-3-9%2C8.9-.4s2.9%2C11.3%2C4.3%2C14.4c1.9%2C4.1%2C3.1%2C4.7%2C5%2C5.8h-3.2s-4.1-1.2-5.9-7.7a0.59%2C0.59%2C0%2C0%2C0-.6-0.4%2C0.62%2C0.62%2C0%2C0%2C0-.3.7s0.5%2C2.4.9%2C3.6a34.87%2C34.87%2C0%2C0%2C0%2C2%2C6h0Z%22%20style%3D%22fill%3A%23fdbf2d%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M15.40%2C12.70l-3.3%2C2.9-8.9.4%2C3.3-2.7%22%20style%3D%22fill%3A%23ce592b%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M9.10%2C21.10l1.4-6.2-5.9.5%22%20style%3D%22fill%3A%23cf572e%3Bopacity%3A0.6%3Bisolation%3Aisolate%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M12.00%2C13.5a4.75%2C4.75%2C0%2C0%2C1-2.6%2C1.1c-1.5.3-2.9%2C0.2-2.9%2C0s1.1-.6%2C2.7-1%22%20style%3D%22fill%3A%23bb3d19%22%3E%3C%2Fpath%3E%0A%3Ccircle%20cx%3D%227.92%22%20cy%3D%228.19%22%20r%3D%226.3%22%20style%3D%22fill%3A%23fdbf2d%22%3E%3C%2Fcircle%3E%0A%3Cpath%20d%3D%22M4.70%2C13.60a6.21%2C6.21%2C0%2C0%2C0%2C8.4-1.9v-0.1a8.89%2C8.89%2C0%2C0%2C1-8.4%2C2h0Z%22%20style%3D%22fill%3A%23ce592b%3Bfill-opacity%3A0.25%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M21.20%2C27.20l0.6-.4a1.09%2C1.09%2C0%2C0%2C0%2C.4-1.3c-0.7-1.5-2.1-4.6-2.8-5.8-0.9-1.7-2.8-4.9-2.8-4.9a1.6%2C1.6%2C0%2C0%2C0-2.17-.65l-0.23.15a1.68%2C1.68%2C0%2C0%2C0-.4%2C2.1s2.3%2C3.9%2C3.1%2C5.3c0.6%2C1%2C2.1%2C3.7%2C2.9%2C5.1a0.94%2C0.94%2C0%2C0%2C0%2C1.24.49l0.16-.09h0Z%22%20style%3D%22fill%3A%23fdbf2d%22%3E%3C%2Fpath%3E%0A%3Cpath%20d%3D%22M19.40%2C19.80c-0.9-1.7-2.8-4.9-2.8-4.9a1.6%2C1.6%2C0%2C0%2C0-2.17-.65l-0.23.15-0.3.3c1.1%2C1.5%2C2.9%2C3.8%2C3.9%2C5.4%2C1.1%2C1.8%2C2.9%2C5%2C3.8%2C6.7l0.1-.1a1.09%2C1.09%2C0%2C0%2C0%2C.4-1.3%2C57.67%2C57.67%2C0%2C0%2C0-2.7-5.6h0Z%22%20style%3D%22fill%3A%23ce592b%3Bfill-opacity%3A0.25%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A"
+                                    aria-label="Street View Pegman Control"
+                                    style="display: none; height: 40px; width: 40px; position: absolute; transform: translate(-60%, -45%); pointer-events: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false"
+                        controlwidth="0" controlheight="0"
+                        style="margin: 10px; user-select: none; position: absolute; display: none; bottom: 14px; right: 0px;">
+                        <div class="gmnoprint" controlwidth="40" controlheight="40"
+                            style="display: none; position: absolute;">
+                            <div style="width: 40px; height: 40px;"><button draggable="false"
+                                    title="Rotate map 90 degrees" aria-label="Rotate map 90 degrees" type="button"
+                                    class="gm-control-active"
+                                    style="background: none rgb(255, 255, 255); display: none; border: 0px; margin: 0px 0px 32px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="height: 18px; width: 18px;"></button><button draggable="false"
+                                    title="Tilt map" aria-label="Tilt map" type="button"
+                                    class="gm-tilt gm-control-active"
+                                    style="background: none rgb(255, 255, 255); display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="width: 18px;"><img
+                                        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                        style="width: 18px;"></button></div>
+                        </div>
+                    </div>
+                    <div class="gmnoprint"
+                        style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;">
+                        <div class="gm-style-mtc" style="float: left; position: relative;">
+                            <div role="button" tabindex="0" title="Show street map" aria-label="Show street map"
+                                aria-pressed="false" draggable="false"
+                                style="direction: ltr; overflow: hidden; text-align: center; height: 40px; display: table-cell; vertical-align: middle; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 0px 17px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 36px;">
+                                Map</div>
+                            <div
+                                style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 40px; text-align: left; display: none;">
+                                <div draggable="false" title="Show street map with terrain"
+                                    style="color: black; font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 5px 8px 5px 5px; direction: ltr; text-align: left; white-space: nowrap;">
+                                    <span role="checkbox" style="vertical-align: middle;"><img
+                                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%203H5c-1.11%200-2%20.9-2%202v14c0%201.1.89%202%202%202h14c1.11%200%202-.9%202-2V5c0-1.1-.89-2-2-2zm-9%2014l-5-5%201.41-1.41L10%2014.17l7.59-7.59L19%208l-9%209z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                            style="height: 1em; width: 1em; transform: translateY(0.15em); display: none;"><img
+                                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%205v14H5V5h14m0-2H5c-1.1%200-2%20.9-2%202v14c0%201.1.9%202%202%202h14c1.1%200%202-.9%202-2V5c0-1.1-.9-2-2-2z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                            style="height: 1em; width: 1em; transform: translateY(0.15em);"></span><label
+                                        style="vertical-align: middle; cursor: pointer;">Terrain</label></div>
+                            </div>
+                        </div>
+                        <div class="gm-style-mtc" style="float: left; position: relative;">
+                            <div role="button" tabindex="0" title="Show satellite imagery"
+                                aria-label="Show satellite imagery" aria-pressed="false" draggable="false"
+                                style="direction: ltr; overflow: hidden; text-align: center; height: 40px; display: table-cell; vertical-align: middle; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 0px 17px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 66px; border-left: 0px;">
+                                Satellite</div>
+                            <div
+                                style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 70px; top: 40px; text-align: left; display: none;">
+                                <div draggable="false" title="Show imagery with street names"
+                                    style="color: black; font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 5px 8px 5px 5px; direction: ltr; text-align: left; white-space: nowrap;">
+                                    <span role="checkbox" style="vertical-align: middle;"><img
+                                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%203H5c-1.11%200-2%20.9-2%202v14c0%201.1.89%202%202%202h14c1.11%200%202-.9%202-2V5c0-1.1-.89-2-2-2zm-9%2014l-5-5%201.41-1.41L10%2014.17l7.59-7.59L19%208l-9%209z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                            style="height: 1em; width: 1em; transform: translateY(0.15em);"><img
+                                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%205v14H5V5h14m0-2H5c-1.1%200-2%20.9-2%202v14c0%201.1.9%202%202%202h14c1.1%200%202-.9%202-2V5c0-1.1-.9-2-2-2z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+                                            style="height: 1em; width: 1em; transform: translateY(0.15em); display: none;"></span><label
+                                        style="vertical-align: middle; cursor: pointer;">Labels</label></div>
+                            </div>
+                        </div>
+                        <div class="gm-style-mtc" style="float: left; position: relative;">
+                            <div role="button" tabindex="0" title="" aria-label="" aria-pressed="true" draggable="false"
+                                style="direction: ltr; overflow: hidden; text-align: center; height: 40px; display: table-cell; vertical-align: middle; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 0px 17px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 91px; border-left: 0px; font-weight: 500;">
+                                Styled Map</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-wrap">
+            <div class="info-container">
+                <div class="our-info side main-bg">
+                    <div class="info-block">
+                        <div class="info-title text-upper">Contact Us</div>
+                        <div class="info-line"><span class="info-icon"><i class="fas fa-map-marker-alt fa-fw"
+                                    aria-hidden="true"></i></span>Sidestate NSW 4132, Australia</div>
+                        <div class="info-line"><span class="info-icon"><i class="fas fa-phone fa-fw"
+                                    aria-hidden="true"></i></span>(555) 555-0312</div>
+                        <div class="info-line"><span class="info-icon"><i class="far fa-envelope fa-fw"
+                                    aria-hidden="true"></i></span>info@profix.com</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-title text-upper">Opening Hours</div>
+                        <div class="info-line">Monday-Friday<span class="pull-right">10:00 - 18:00</span></div>
+                        <div class="info-line">Saturday, Sunday<span class="pull-right">Closed</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="block-cart collapse" data-block="cart" data-show-block-class="animation-scale-top-right"
+        data-hide-block-class="animation-unscale-top-right">
+        <div class="cart-inner"><a href="https://amigosthemes.com/profix/index.html#" class="close-link"
+                data-close-block=""><i class="fas fa-times" aria-hidden="true"></i></a>
+            <h4 class="text-upper text-center">Your cart</h4>
+            <div class="items">
+                <div class="items collapse" data-block="cart" data-show-block-class="animation-scale-top-right"
+                    data-hide-block-class="animation-unscale-top-right">
+                    <div class="shop-side-item cart-item"><a href="https://amigosthemes.com/profix/index.html#"
+                            class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="https://amigosthemes.com/profix/shop-item.html"
+                                class="item-image responsive-1by1"><img
+                                    src="./img/usb-hub.jpg"
+                                    alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a class="item-label-sm item-label-sale item-label"
+                                    href="https://amigosthemes.com/profix/index.html#">sale</a> <a
+                                    href="https://amigosthemes.com/profix/shop-item.html"
+                                    class="content-link text-upper">USB 3.0 HUB</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$67.05</div>
+                                <div class="item-old-price">$102.5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-side-item cart-item"><a href="https://amigosthemes.com/profix/index.html#"
+                            class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="https://amigosthemes.com/profix/shop-item.html"
+                                class="item-image responsive-1by1"><img
+                                    src="img/cable-organizer.jpg"
+                                    alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a class="item-label-sm item-label-new item-label"
+                                    href="https://amigosthemes.com/profix/index.html#">new</a> <a
+                                    href="https://amigosthemes.com/profix/shop-item.html"
+                                    class="content-link text-upper">Cable Organizer</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$15.25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-side-item cart-item"><a href="https://amigosthemes.com/profix/index.html#"
+                            class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="https://amigosthemes.com/profix/shop-item.html"
+                                class="item-image responsive-1by1"><img
+                                    src="./img/tablet.jpg"
+                                    alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a href="https://amigosthemes.com/profix/shop-item.html"
+                                    class="content-link text-upper">10" Octa Core Tablet</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$145.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-sides main-bg shift-lg"></div>
+            <div class="row out-md">
+                <div class="col-6 cart-price-title">Subtotal:</div>
+                <div class="col-6 text-right cart-price">$105.20</div>
+            </div>
+            <div class="line-sides main-bg offs-lg"></div>
+            <div class="clearfix"><a href="https://amigosthemes.com/profix/cart.html"
+                    class="btn text-upper btn-md btns-bordered pull-left">view cart</a> <a
+                    href="https://amigosthemes.com/profix/checkout.html"
+                    class="btn text-upper btn-md pull-right">checkout</a></div>
+        </div>
+    </div><a href="https://amigosthemes.com/profix/index.html#" class="scroll-top"><i class="fas fa-angle-up"
+            aria-hidden="true"></i></a>
+    <div class="singlepage-block collapse alt-bg" data-block="search" data-show-block-class="animation-scale-top-right"
+        data-hide-block-class="animation-unscale-top-right"><a href="https://amigosthemes.com/profix/index.html#"
+            class="close-link" data-close-block=""><i class="fas fa-times" aria-hidden="true"></i></a>
+        <div class="pos-v-center col-12">
+            <div class="container">
+                <form action="https://amigosthemes.com/profix/index.html#">
+                    <div class="row cols-md rows-md">
+                        <div class="lg-col-9 md-col-8 sm-col-12">
+                            <div class="field-group">
+                                <div class="field-wrap"><input class="field-control" name="search"
+                                        placeholder="Search Tags" required="required"> <span class="field-back"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg-col-3 md-col-4 sm-col-6"><button class="btn btns-white-bordered text-upper"
+                                type="submit">search</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="loader-block">
+        <div class="loader-back alt-bg"></div>
+        <div class="loader-image"><img class="image"
+                src="./img/loader.gif"
+                alt=""></div>
+    </div>
+    <footer class="footer">
+        <div class="container only-xs-text-justify-center">
+            <div class="solid-section">
+                <div class="row cols-md">
+                    <div class="sm-col-3">
+                        <div class="footer-logo"><img
+                                src="./img/logo-alt.png"
+                                alt="ProFix"></div>
+                        <div class="footer-text sm-text-justify">Profix is a Premium PSD Template. Best choice for your
+                            online store. Let purchase it to enjoy now</div>
+                    </div>
+                    <div class="sm-col-8 sm-push-1">
+                        <div class="row cols-md">
+                            <div class="sm-col-4">
+                                <div class="footer-title alt-color text-upper">Address</div>
+                                <div class="footer-text">Sidestate NSW 4132,<br>Australia</div>
+                            </div>
+                            <div class="sm-col-4">
+                                <div class="footer-title alt-color text-upper">Contacts</div>
+                                <div class="footer-text">(555) 555-0312<br>info@profix.com</div>
+                            </div>
+                            <div class="sm-col-4">
+                                <div class="footer-title alt-color text-upper">Socials</div>
+                                <div class="cols-list socials cols-sm inline-block"><a
+                                        href="https://amigosthemes.com/profix/index.html#" class="list-item"><i
+                                            class="fab fa-facebook-f" aria-hidden="true"></i></a> <a
+                                        href="https://amigosthemes.com/profix/index.html#" class="list-item"><i
+                                            class="fab fa-twitter" aria-hidden="true"></i></a> <a
+                                        href="https://amigosthemes.com/profix/index.html#" class="list-item"><i
+                                            class="fab fa-pinterest" aria-hidden="true"></i></a> <a
+                                        href="https://amigosthemes.com/profix/index.html#" class="list-item"><i
+                                            class="fab fa-google-plus-g" aria-hidden="true"></i></a> <a
+                                        href="https://amigosthemes.com/profix/index.html#" class="list-item"><i
+                                            class="fab fa-dribbble" aria-hidden="true"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyrights text-center top-separator ins-md">© 2020 <b>ProFix</b>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <script
+        src="./css/jquery-3.3.1.min.js.download">
+    </script>
+    <script
+        src="./css/parallax.min.js.download">
+    </script>
+    <script
+        src="./css/jquery.flexslider-min.js.download">
+    </script>
+    <script
+        src="./css/owl.carousel.min.js.download">
+    </script>
+    <script
+        src="./css/shuffle.min.js.download">
+    </script>
+    <script
+        src="./css/jquery.waypoints.min.js.download">
+    </script>
+    <script
+        src="./css/chosen.jquery.min.js.download">
+    </script>
+    <script
+        src="./css/jquery-ui.min.js.download"
+        type="text/javascript"></script>
+    <script
+        src="./css/pentix.min.js.download"
+        type="text/javascript"></script>
+    <script src="./css/script.js.download"
+        type="text/javascript"></script>
+    <script async="" defer="defer"
+        src="./css/js"></script>
+</body>
+
+</html>

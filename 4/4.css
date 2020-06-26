@@ -1,0 +1,365 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    margin: auto;
+    width: 1000px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.top-header
+{
+    background-color: #232323;
+    font-size: 12px;
+    height: 46px;
+    width: 1000px;
+    border-bottom: 1px solid #4c4c4c;
+}
+    .top-left
+    {
+        float: left;
+        margin: 10px 0 10px 20px; 
+    }
+        #search
+        {
+            background-color: #232323;
+            border: 1px solid #363636;
+            color: 3363636;
+            padding-left: 5px;
+            width: 250px;
+            height: 24px;
+        }
+        button
+        {
+            margin-left: 10px;
+            color: #000000;
+            background-color: #3a3a3a;
+            width: 80px;
+            height: 24px;
+            border: 1px solid #363636;
+        }
+    .top-right
+    {
+        float: right;
+        margin: 10px 20px 10px 0; 
+    }
+            #username
+            {
+                background-color: #232323;
+                border: 1px solid #363636;
+                padding-left: 5px;
+                width: 120px;
+                height: 24px;
+            }
+            #password
+            {
+                background-color: #232323;
+                border: 1px solid #363636;
+                padding-left: 5px;
+                width: 120px;
+                height: 24px;  
+                margin-left: 10px;  
+            }
+
+
+header
+{
+    width: 1000px;
+    height: 133px;
+    background-color: #232323;
+    display: flex;
+}
+    .logo
+    {
+        padding-top: 30px;
+        margin-left: 20px;
+    }
+        .logo-text
+        {
+            color: #ffffff;
+            font-size: 36px;
+            text-decoration: none;
+        }
+    .img
+    {
+        float: right;
+        padding-right: 20px;
+        width: 468px;
+        height: 60px;
+        border: 1px solid #363636;
+        margin: 30px 20px auto auto;
+    }
+
+.all-menu
+{
+    width: 1000px;
+    height: 60px;
+    background-color: #232323;
+}
+.menu
+{
+    margin: auto;
+    width: 960px;
+    height: 60px;
+    background-color: #000000;
+}
+ul
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+ul li 
+{
+    margin: auto;
+    margin-top: 20px;
+}
+ul li a
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.all-slide
+{
+    background-color: #232323;
+    width: 1000px;
+    height: 450px;
+    padding-top: 20px;
+    border-bottom: 1px solid #363636;
+}
+.img-slide
+{
+    width: 960px;
+    height: 405px;
+    margin: auto;
+    border: 15px solid #3a3b3f;
+    border-radius: 10px; 
+    margin-left: 20px;  
+    margin-right: 20px; 
+    z-index: 1;
+    position: absolute;
+}
+.icon-left
+{
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    z-index: 2;
+    position: absolute;
+    margin: 50px auto auto 60px;
+}
+.icon-right
+{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    z-index: 2;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 910px;
+    margin-right: 50px;
+}
+.banner
+{
+    width: 625px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #292929;
+    color: #ffffff;
+    margin: auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: 260px;
+    margin-left: 190px;
+    margin-right: 200px;
+}
+.content-1
+{
+    background-color: #232323;
+    width: 1000px;
+    height: 250px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.img-content-1
+{
+    padding-top: 50px;
+    width: 147px;
+    height: 123px;
+    padding: 5px;
+}
+.img-content-1 img{
+    width: 147px;
+    height: 123px;  
+    border: 1px solid #4f4f4f;
+    padding: 5px;
+}
+.con-1
+{
+    width: 190px;
+    height: 170px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.text
+{
+    color: #f35425;
+    font-size: 12px;
+    padding-top: 15px;
+    background-color: #1e1e1e;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+.content-2
+{
+    width: 1000px;
+    height: 380px;
+    background-color: #232323;
+    display: flex;
+    
+    
+}
+.content-2 .hr-con-2
+{
+    margin-left: 20px;
+    width: 298px;
+    border: 1px solid #383838;
+}
+.con-2 img
+{
+    width: 300px;
+    height: 150px;
+    padding-top: 15px;
+    margin-left: 20px
+}
+.con-2 p{
+    padding-top: 10px;
+}
+.text-2  
+{
+    color: #f35425;
+    font-size: 12px;
+    padding-top: 15px;
+    background-color: #1e1e1e;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.all-link
+{
+    width: 1000px;
+    height: 160px;
+    background-color: #232323;    
+}
+.all-link .link
+{
+    width: 960px;
+    height: 170px;
+    background-color: #2d2d2f;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 30% auto auto auto;
+    grid-row: 150px 600px;
+    padding-bottom: 10px;
+}
+.hr-link
+{
+    border: 1px solid #636364;
+    margin-top: 10px;
+}
+.hr-about
+{
+    border: 1px solid #636364;   
+}
+.link-1
+{
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 20px;
+}
+
+.link-2
+{
+    grid-column: 1;
+    grid-row: 2; 
+    padding-left: 20px;  
+}
+
+.link-3
+{
+    grid-column: 2;
+    grid-row: 1; 
+    padding-left: 20px;
+}
+
+.link-4
+{
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 20px;     
+}
+
+.link-5
+{
+    padding-left: 20px;
+    grid-column: 3;
+    grid-row: 1;     
+}
+.link-7
+{
+    padding-left: 20px;
+    grid-column: 4;
+    grid-row: 1;   
+    margin-right: 20px;  
+}
+.link-6
+{
+    grid-column: 3;
+    grid-row: 2; 
+    padding-left: 20px;    
+}
+
+.link-8
+{
+    grid-column: 4;
+    grid-row: 2; 
+    padding-left: 20px;    
+}
+.end
+{
+    width: 960px;
+    height: 50px;
+    margin: auto;
+    font-size: 10pt;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #1f1f1f;
+}
+.kt
+{
+    width: 1000px;
+    background-color: #232323;
+    height: 50px;
+}

@@ -1,0 +1,295 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 1000px;
+    margin: auto;
+}
+header
+{
+    height: 135px;
+    padding-top: 40px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MENU */
+.logo
+{
+    float: left;
+    padding-left: 20px;
+}
+.menu-right
+{
+    height: 55px;
+    background-color: #e2494b;
+    border-radius: 10px;
+    width: 617px;
+    margin-left: 155px;
+    margin-right: 20px;
+}
+ul 
+{
+    margin: 0;
+    padding: 0;   
+}
+ul.menu
+{
+    list-style: none;
+    display: flex;
+    height: 55px;
+}
+ul.menu li 
+{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+ul.menu a
+{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 13px;
+}
+ul li a:active 
+{
+    color: #ee9395;
+}
+ul li a:hover 
+{
+    color: #ee9395;
+} 
+#hr
+{
+    width: 1000px;
+    border-top: 1px solid #e2e2e2;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+.mySlides {
+    display: none;
+  }
+.dot 
+{
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #cecece;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    border: 3px solid #353535;
+    background-color: #ffffff;
+}
+.fade 
+{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+} 
+
+@-webkit-keyframes fade 
+{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade 
+{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* SERVICES */
+.all-os
+{
+    width: 1000px;
+    height: 180px;
+}
+.button-center, .service
+{
+    position: absolute;
+}
+.button-center
+{
+    margin-top: -15px;
+    width: 176px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e2494b;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px;
+    margin-left: 410px;
+    margin-right: 390px;
+    z-index: 2;
+}
+.hr-z-index
+{
+    z-index: 1;
+    margin-top: 55px;
+    width: 1000px;
+    border-top: 1px solid #e2e2e2;
+}
+.service
+{
+    padding-top: 40px;
+    display: flex;
+    height: 190px;
+    width: 1000px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.title-img
+{
+    display: flex;
+}
+.os
+{
+    
+    width: calc(1000px/3);
+    height: 150px;
+    padding-left: 15px;
+}
+
+/* PLAYER */
+.all-player
+{
+    height: 320px;
+    width: 1000px;
+}
+.player
+{
+    width: 1000px;
+    padding-top: 45px;
+    display: flex;
+}
+.name
+{
+    width: 200px;
+    margin-right: 30px;
+}
+
+/* WORK */
+.all-work
+{
+    height: 200px;
+    width: 1000px;
+}
+.work
+{
+    padding-top: 45px;
+    width: 1000px;
+    display: flex;
+}
+.picture
+{
+    margin-right: 50px;    
+}
+
+/* INFORMATION-CONTACT US */
+.information
+{
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    background: #e2e2e2;
+    height: 355px;
+}
+.L
+{
+    margin-left: 20px;
+    width: 50%;
+    padding-top: 40px;
+}
+.blog
+{
+    padding-top: 15px;
+    display: flex;
+    margin-right: 20px;
+}
+.blog .text
+{
+    padding-left: 20px;
+}
+.C 
+{
+    padding-top: 40px;
+    width: 25%;
+}
+.CU
+{
+    padding-top: 40px;
+    width: 25%;
+    color: #989898;
+}
+#name
+{
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 225px;
+    height: 31px;
+    border-radius: 5px;
+    border: none;
+}
+#email
+{
+    padding-top: 10px;
+    width: 225px;
+    padding-left: 10px;
+    height: 31px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+#mess
+{
+    width: 225px;
+    padding-left: 10px;
+    /* height: 110px; */
+    padding-bottom: 90px;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+#submit
+{
+    width: 80px;
+    height: 31px;
+    color: #ffffff;
+    background-color: #e2494b;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+footer{
+    margin-top: 1px;
+    width: 1000px;
+    height: 50px;
+    background: #e2e2e2;
+    color: #999999;
+    border-top: #c3c3c3 1px solid;
+}
+
